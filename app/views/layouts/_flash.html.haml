@@ -1,0 +1,11 @@
+%center 
+  - if flash.notice
+    - if flash.notice.zero?
+      - message = "Served from cache, refreshing in less than one minute"
+    - else
+      - message = "Served from cache, refreshing in " + pluralize(flash.notice, "minute")
+
+    .notice{style: "background-color:MediumSeaGreen; color:White; font-size: 60px"}= message
+
+  - if flash.alert
+    .alert{style: "background-color:Tomato; color:White; font-size: 60px"}= flash.alert

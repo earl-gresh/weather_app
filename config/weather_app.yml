@@ -1,0 +1,4 @@
+geocode_api_key: 6757e2ff9b31a482270220lmsc77c59
+geocode_api_url: https://geocode.maps.co/search?
+weather_service_url: https://api.weather.gov/points/
+cache_expiration: 30
