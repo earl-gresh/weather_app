@@ -1,0 +1,20 @@
+= form_with url: "/forecast", method: :post do |f|
+  %center
+    %p
+      = f.label :street
+      %br
+      = f.text_field :street
+    %p
+      = f.label :city
+      %br
+      = f.text_field :city
+    %p
+      = f.label :state
+      %br
+      = f.text_field :state
+    %p
+      = f.label :zipcode
+      %br
+      = f.text_field :zipcode
+
+    = f.submit "Show Forecast"

@@ -1,0 +1,29 @@
+%h1
+  %center
+    Your Forecast for
+    = @forecast.name
+%h2
+  %center
+    = @forecast.shortForecast
+%h3
+  %center
+    %table
+      %tr
+        %td Temperature
+        %td
+          = @forecast.temperature
+          = @forecast.temperatureUnit
+      %tr
+        %td Windspeed
+        %td= @forecast.windSpeed
+      %tr
+        %td Wind Direction
+        %td= @forecast.windDirection
+      %tr
+        %td Precipitation
+        %td= @forecast.precipitation
+    %h4 Detailed Forecast
+    %p= @forecast.detailedForecast
+
+%center
+  %a{ href: new_forecast_path } Another Forecast
