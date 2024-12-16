@@ -39,7 +39,7 @@ Many if not most weather APIs that I researched require the user to sign up with
 3. Extract the URL from the metadata
 4. Query the National Weather Service's API again using the extracted URL to get the forecast.
 
-Note: Many online services provide an API to Geocode a street address into latitude and longitude components. I was unable to find a token free service and settled on [Geocoding API](http://geocode.maps.co) to achieve the first step in the process.
+Note: Many online services provide an API to convert a street address into latitude and longitude components. I was unable to find a token free service and settled on [Geocoding API](http://geocode.maps.co) to achieve the first step in the process.
 
 ### Application Configuration
 
@@ -53,7 +53,7 @@ geocode_api_url: https://geocode.maps.co/search?
 weather_service_url: https://api.weather.gov/points/
 cache_expiration: 30
 ```
-I already included a working API token in this file to ensure a smooth experience. If you would prefer to register with the Geocode service and obtain your own API token, please make the setting adjustment. There should not be a reason to change either of the URLs. If you want to change the cache expiration for already completed queries, please change the cache_expiration variable to a different value (expressed in minutes).
+A working API token is included in this file to ensure a smooth experience. If you would prefer to register with the Geocode service and obtain your own API token, please make the setting adjustment. There should not be a reason to change either of the URLs. If you want to change the cache expiration for already completed queries, please change the cache_expiration variable to a different value (expressed in minutes).
 
 ### Controller Actions
 There is a single controller to handle user facing interactions with three actions: new, create, and show.
